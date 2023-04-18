@@ -13,9 +13,7 @@ const getAllbooks = async (req, res) => {
 
 const addBook = async (req, res) => {
     try {
-        const newBook = await Book.create({ //req.body can be used in the brackets like this Book.create(req.body). what this means is that
-                                        // as long as the request has the same fields as the fields on the database it'll use that template
-                                        // for example here the 3 fields are author, title and genre, as long those are the fields it'll work
+        const newBook = await Book.create({ 
         title: req.body.title,
         author: req.body.author,
         genre: req.body.genre,
